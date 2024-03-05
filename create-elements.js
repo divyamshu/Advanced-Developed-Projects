@@ -3,8 +3,13 @@
                 if (attributes != null) {
                     for (let i = 0; i < Object.keys(attributes).length; i++) {
                         let var_element_attribute = document.createAttribute(Object.keys(attributes)[i]);
-                        var_element_attribute.value = Object.values(attributes)[i];
-                        var_element.setAttributeNode(var_element_attribute);
+                        if(Object.values(attributes)[i] != null){
+                            var_element_attribute.value = Object.values(attributes)[i];
+                            var_element.setAttributeNode(var_element_attribute);
+                        }
+                        else{
+                            var_element.setAttributeNode(var_element_attribute);
+                        }
                     } 
                 }
                 if (innertext != null){
