@@ -2,7 +2,7 @@
 
 Create Element JS helps in removing redundancy & complication while creating synamic elements using Vanilla JS.
 
-`Import` →  `Declare`  →   `Call`
+**`Import` →  `Declare`  →   `Call`**
 
 # Compatibility 
 
@@ -46,7 +46,7 @@ create_element(`Element Name` , `Attributes` , `Parent Element` ,  `Innertext`);
 
 ## How to Call It ?
 
-> Example To Create a Heading
+#### Example To Create a Heading
  ```sh
   <h2> Bootstrap heading</h2>
 ```
@@ -56,7 +56,7 @@ var h2 = create_element('h2', null, null, ' Bootstrap heading');
 ```
 
 
-> Example To Create Dynamically the input text field like below -
+#### Example To Create Dynamically the input text field like below -
  ```sh
 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
 ```
@@ -71,7 +71,7 @@ var input_text = create_element('input', input_text_attributes, null, null);
 ```
 
 
-> Example To Create Dynamically Create a Nested Elements -
+#### Example To Create Dynamically Create a Nested Elements -
   ```sh
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
@@ -87,9 +87,26 @@ var div_mb_3 = create_element('div',{'class':'mb-3'}, null, null);
   document.getElementById('root').appendChild(div_mb_3);  //Append Parent Element Only
 ````
 
+#### Create an Video Source with Attributes without Values
+```sh
+<video width="320" height="240" controls autoplay>
+```
+We have to declare it as below - 
+ ```sh
+  var div_video = create_element('video',{'width':'320', 'height':'240', 'controls':null, 'autoplay': null}, null, null);
+  
+  document.getElementById('root').appendChild(div_video);  //Append Parent Element Only
+````
+> [!WARNING]
+> For Key Attributes without values like autoplay, disabled, etc. use ***value*** as ***null*** like **{'control' : null}**
 
+## Release & Updates
 
+### Release v1.1 (March 2024) ###
+- Now supports Key Attributes without values like autoplay, loop, disabled, checked, etc.
 
+### Release v1.0 (May 2022) ###
+- Initial Release 
 
 ## License
 Licensed by [MIT](https://raw.githubusercontent.com/divyamshu/Create-JS/main/LICENSE)
